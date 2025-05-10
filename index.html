@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Stories | OLIVIA - A Cyberpunk Short Story</title>
+    <style>
+        :root {
+            --neon-pink: #ff2a6d;
+            --neon-blue: #05d9e8;
+            --neon-purple: #d300c5;
+            --dark-bg: #0d0221;
+            --text-color: #d1f7ff;
+            --text-glow: 0 0 10px var(--neon-blue);
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 42, 109, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(5, 217, 232, 0.15) 0%, transparent 20%);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .platform-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--neon-purple);
+        }
+        
+        .platform-title {
+            color: var(--neon-pink);
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 4px;
+            text-shadow: 0 0 15px var(--neon-pink);
+        }
+        
+        .platform-description {
+            color: var(--neon-blue);
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            text-shadow: 0 0 8px var(--neon-blue);
+        }
+        
+        .story-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--neon-purple);
+            text-shadow: var(--text-glow);
+        }
+        
+        .story-title {
+            color: var(--neon-pink);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 3px;
+        }
+        
+        .subtitle {
+            color: var(--neon-blue);
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        
+        .story-section {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .time-stamp {
+            color: var(--neon-purple);
+            font-weight: bold;
+            margin-top: 2rem;
+            display: inline-block;
+            text-shadow: 0 0 5px var(--neon-purple);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+            margin: 2rem 0;
+        }
+        
+        .epilogue {
+            font-style: italic;
+            border-left: 3px solid var(--neon-pink);
+            padding-left: 1rem;
+            margin: 3rem 0;
+        }
+        
+        .donation-section {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            background: rgba(13, 2, 33, 0.7);
+            border: 1px solid var(--neon-blue);
+            border-radius: 5px;
+        }
+        
+        .donation-text {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .paypal-btn {
+            background-color: var(--neon-blue);
+            color: var(--dark-bg);
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .paypal-btn:hover {
+            background-color: var(--neon-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 42, 109, 0.4);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--neon-purple);
+            font-size: 0.9rem;
+            color: var(--neon-blue);
+        }
+        
+        /* Cyberpunk glitch effect */
+        @keyframes glitch {
+            0% { text-shadow: 0 0 10px var(--neon-blue); }
+            25% { text-shadow: 2px 0 10px var(--neon-pink), -2px 0 10px var(--neon-blue); }
+            50% { text-shadow: -3px 0 10px var(--neon-purple), 3px 0 10px var(--neon-pink); }
+            100% { text-shadow: 0 0 10px var(--neon-blue); }
+        }
+        
+        .glitch-effect {
+            animation: glitch 5s infinite;
+        }
+        
+        /* Neon pulse effect */
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; text-shadow: 0 0 20px var(--neon-blue); }
+            100% { opacity: 0.8; }
+        }
+        
+        .pulse-effect {
+            animation: pulse 3s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado de la plataforma Neon Stories -->
+        <div class="platform-header">
+            <h1 class="platform-title glitch-effect">NEON STORIES</h1>
+            <p class="platform-description pulse-effect">Descubre historias que te harán cuestionar la realidad en nuestra plataforma dedicada al cyberpunk de alto impacto. Cada relato es un viaje a ciudades neon.</p>
+        </div>
+        
+        <!-- Encabezado de la historia específica -->
+        <div class="story-header">
+            <h1 class="story-title glitch-effect">OLIVIA</h1>
+            <div class="subtitle">"The future doesn't forgive. It only counts down."</div>
+        </div>
+        
+        <!-- Resto del contenido de la historia (se mantiene igual) -->
+        <div class="story-section">
+            <div class="time-stamp">8:00 A.M. – AWAKENING</div>
+            <p>The alarm rang like a gunshot in the dark. 8:00 A.M. Olivia Mei opened her eyes, her pupils dilating against the cold light seeping through the blinds of her Neo-Suburbia loft. Outside, the city was already breathing with the mechanical rhythm of those privileged enough to exist in the upper tiers.</p>
+            
+            <p>She dragged herself out of bed, the titanium floor icy under her bare feet. The scent of synthetic coffee filled the air, mingling with the ionized rain drifting in through the half-open window. As the coffee maker hissed, she stepped under the shower's stream, letting the sensors adjust the temperature to her preferences.</p>
+            
+            <p>The holographic display from the Orb-News (a floating sphere in the center of the room) projected updates in hues of blue and gold:</p>
+            
+            <p>"New record on the Neo-Suburbia stock exchange."<br>
+            "Riots in Under-Suburbia suppressed by containment drones."<br>
+            "Politician Alden Voss inaugurates new air purification center today."</p>
+            
+            <p>Olivia took a sip of coffee, barely glancing at the feed. None of it mattered. None of it touched her.</p>
+            
+            <p>Until today.</p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="story-section">
+            <div class="time-stamp">8:45 A.M. – THE RUN</div>
+            <p>Celeste Park hovered on the 150th level, an oxygen-filtered bubble between skyscrapers. Olivia ran along reinforced glass pathways beneath an artificial sky mimicking dawn. The people around her were perfect silhouettes: corporate suits, beauty implants, calculated laughter.</p>
+            
+            <p>Then they appeared.</p>
+            
+            <p>Two figures emerged from the synthetic trees. Black hoods, faces painted with red neon lines. No warning. Just a cold, precise sting in her neck.</p>
+            
+            <p>Olivia collapsed to her knees, vision blurring. One of them showed her the injector in their hand—a vial linked to a digital countdown.</p>
+            
+            <p>00:59:59<br>
+            00:59:58<br>
+            00:59:57…</p>
+            
+            <p>—"Let's play." —The voice was robotic, distorted.</p>
+            
+            <p>They tossed her a handheld scanner, a crude, illegal device.</p>
+            
+            <p>—"The cure is somewhere in the city. Could be in a trash bag. Could be in someone's pocket. You've got an hour."</p>
+            
+            <p>Then, they melted into the crowd.</p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="story-section">
+            <div class="time-stamp">9:15 A.M. – THE HUNT</div>
+            <p>Neo-Suburbia was a maze of lights and lies. Olivia ran, the countdown burning in her peripheral vision, the numbers searing into her mind.</p>
+            
+            <p>00:45:23</p>
+            
+            <p>The scanner beeped for the first time near a magnetic train station. A vagrant slumped against a wall, clutching a plastic bag. Olivia rifled through it with trembling hands. Nothing.</p>
+            
+            <p>00:30:11</p>
+            
+            <p>The second chime led her to a high-end restaurant. A cyber-eyed executive dined alone. Olivia followed her to the restroom, demanded she empty her purse. The woman laughed, called security. Olivia fled, her heart hammering like a faulty engine.</p>
+            
+            <p>00:15:47</p>
+            
+            <p>Sweat dripped down her back. The city grew more hostile, more alien. The scanner screamed near Mirror Plaza, where the wealthy looked at themselves and saw only what they wanted.</p>
+            
+            <p>There he was.</p>
+            
+            <p>A tall man, immaculate suit, speaking into a wrist-com. Alden Voss. The politician from the news.</p>
+            
+            <p>And in his inner pocket… the scanner vibrated like a dying heart.</p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="story-section">
+            <div class="time-stamp">9:55 A.M. – THE CHOICE</div>
+            <p>Olivia approached, hands shaking.</p>
+            
+            <p>—"Excuse me, I need—"</p>
+            
+            <p>Voss looked at her with disdain.</p>
+            
+            <p>—"Are you alright, miss? You look ill."</p>
+            
+            <p>00:05:12</p>
+            
+            <p>No time. No options.</p>
+            
+            <p>Her wrist-com buzzed. An anonymous message:</p>
+            
+            <p>"WEAPON. LEFT TRASH BIN."</p>
+            
+            <p>Olivia glanced. A metallic glint among the garbage. A neural pistol, small, deadly.</p>
+            
+            <p>00:03:01</p>
+            
+            <p>Voss was still talking, but words no longer mattered.</p>
+            
+            <p>Olivia fired.</p>
+            
+            <p>The politician dropped, a perfect hole in his forehead. People screamed. Security drones buzzed overhead.</p>
+            
+            <p>She dug into his pocket. The vial.</p>
+            
+            <p>00:00:47</p>
+            
+            <p>She injected it into her neck just as the NeoCops tackled her.</p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="story-section">
+            <div class="time-stamp epilogue">EPILOGUE: THE PRICE</div>
+            <p>The next day's headlines:</p>
+            
+            <p>"Under-Suburbia Terrorist Assassinates Prominent Politician."<br>
+            "Radical Cell Linked to Neo-Suburbia Attack."</p>
+            
+            <p>Olivia, cuffed in a containment cell, stared through the reinforced glass. Outside, the city kept shining.</p>
+            
+            <p>One of the guards, a man with shrapnel scars on his face, approached.</p>
+            
+            <p>—"You know you were played, right? That 'cure' was just sterilized water. The poison… was never real."</p>
+            
+            <p>Olivia didn't answer.</p>
+            
+            <p>Deep down, she'd always known.</p>
+            
+            <p>The game was never about saving her.</p>
+            
+            <p>It was about breaking her.</p>
+            
+            <p class="time-stamp" style="text-align: center; margin-top: 2rem;">END.</p>
+        </div>
+        
+        <div class="donation-section">
+            <h2>Enjoyed this cyberpunk tale?</h2>
+            <p class="donation-text">If this story resonated with you, consider supporting the author. Your contribution helps create more dark, immersive futures.</p>
+            
+            <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                <input type="hidden" name="business" value="maxalejandrogonzalez@gmail.com">
+                <input type="hidden" name="currency_code" value="USD">
+                <button type="submit" class="paypal-btn">Support via PayPal</button>
+            </form>
+            
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Even $3 helps (the price of a synthetic coffee in Neo-Suburbia)</p>
+        </div>
+        
+        <footer>
+            <p>© 2025 Neon Stories | All rights reserved</p>
+            <p>This is a work of fiction. Any resemblance to actual events or persons is purely coincidental.</p>
+        </footer>
+    </div>
+</body>
+</html>
